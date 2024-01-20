@@ -1,0 +1,49 @@
+name: my_topology
+
+topology:
+  defaults:
+    kind: linux
+  nodes:
+    R1:
+      image: frr
+      binds:
+        - daemons:/etc/frr/daemons
+        - R1.conf:/etc/frr/frr.conf
+
+    R2:
+      image: frr
+      binds:
+        - daemons:/etc/frr/daemons
+        - R2.conf:/etc/frr/frr.conf
+
+    UPF:
+      image: ubuntu:20.04
+      config: null
+      exec:
+        - apt-get update
+        - apt-get install python3
+        - apt-get install nano
+
+    H1:
+      image: ubuntu:20.04
+      config: null
+      exec:
+        - apt-get update
+        - apt-get install -y iputils-ping
+        - apt-get install python3
+        - apt-get install nano
+
+    H2:
+      image: ubuntu:20.04
+      config: null
+      exec:
+        - apt-get update
+        - apt-get install -y iputils-ping
+        - apt-get install python3
+        - apt-get install nano
+
+  links:
+    - endpoints: ["R1:eth1", "H1:eth1"]
+    - endpoints: ["R1:eth2", "UPF:eth1"]
+    - endpoints: ["UPF:eth2", "R2:eth1"]
+    - endpoints: ["R2:eth2", "H2:eth1"]  # Changed interface from eth1 to eth2

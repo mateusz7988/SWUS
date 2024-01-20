@@ -1,0 +1,224 @@
+{
+  "name": "my_topology",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-af628a3fc0a6",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "2001:172:20:20::/64",
+        "ipv6-gw": "2001:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "H1": {
+      "index": "0",
+      "shortname": "H1",
+      "longname": "clab-my_topology-H1",
+      "fqdn": "H1.my_topology.io",
+      "group": "",
+      "labdir": "/home/iplabs/Desktop/swus/clab-my_topology/H1",
+      "kind": "linux",
+      "image": "ubuntu:20.04",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.16",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::10",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-af628a3fc0a6",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/iplabs/Desktop/swus/clab-my_topology/H1",
+        "clab-node-name": "H1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/iplabs/Desktop/swus/swus.clab.yml",
+        "containerlab": "my_topology"
+      },
+      "port-bindings": [
+      ]
+    },
+    "H2": {
+      "index": "1",
+      "shortname": "H2",
+      "longname": "clab-my_topology-H2",
+      "fqdn": "H2.my_topology.io",
+      "group": "",
+      "labdir": "/home/iplabs/Desktop/swus/clab-my_topology/H2",
+      "kind": "linux",
+      "image": "ubuntu:20.04",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.14",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::e",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-af628a3fc0a6",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/iplabs/Desktop/swus/clab-my_topology/H2",
+        "clab-node-name": "H2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/iplabs/Desktop/swus/swus.clab.yml",
+        "containerlab": "my_topology"
+      },
+      "port-bindings": [
+      ]
+    },
+    "R1": {
+      "index": "2",
+      "shortname": "R1",
+      "longname": "clab-my_topology-R1",
+      "fqdn": "R1.my_topology.io",
+      "group": "",
+      "labdir": "/home/iplabs/Desktop/swus/clab-my_topology/R1",
+      "kind": "linux",
+      "image": "frr",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.15",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::f",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-af628a3fc0a6",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/iplabs/Desktop/swus/clab-my_topology/R1",
+        "clab-node-name": "R1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/iplabs/Desktop/swus/swus.clab.yml",
+        "containerlab": "my_topology"
+      },
+      "port-bindings": [
+      ]
+    },
+    "R2": {
+      "index": "3",
+      "shortname": "R2",
+      "longname": "clab-my_topology-R2",
+      "fqdn": "R2.my_topology.io",
+      "group": "",
+      "labdir": "/home/iplabs/Desktop/swus/clab-my_topology/R2",
+      "kind": "linux",
+      "image": "frr",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.13",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::d",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-af628a3fc0a6",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/iplabs/Desktop/swus/clab-my_topology/R2",
+        "clab-node-name": "R2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/iplabs/Desktop/swus/swus.clab.yml",
+        "containerlab": "my_topology"
+      },
+      "port-bindings": [
+      ]
+    },
+    "UPF": {
+      "index": "4",
+      "shortname": "UPF",
+      "longname": "clab-my_topology-UPF",
+      "fqdn": "UPF.my_topology.io",
+      "group": "",
+      "labdir": "/home/iplabs/Desktop/swus/clab-my_topology/UPF",
+      "kind": "linux",
+      "image": "ubuntu:20.04",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.17",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::11",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-af628a3fc0a6",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/iplabs/Desktop/swus/clab-my_topology/UPF",
+        "clab-node-name": "UPF",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/iplabs/Desktop/swus/swus.clab.yml",
+        "containerlab": "my_topology"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "R1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:e3:c1:b7",
+        "peer": "z"
+      },
+      "z": {
+        "node": "H1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:8e:0c:49",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "R1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:a4:3d:12",
+        "peer": "z"
+      },
+      "z": {
+        "node": "UPF",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:4f:c2:6e",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "UPF",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:8f:45:61",
+        "peer": "z"
+      },
+      "z": {
+        "node": "R2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:7b:63:65",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "R2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:06:ce:6c",
+        "peer": "z"
+      },
+      "z": {
+        "node": "H2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:da:71:b6",
+        "peer": "a"
+      }
+    }
+  ]
+}
